@@ -1,0 +1,2773 @@
+{
+  "vulnerabilities": [
+    {
+      "id": "SNYK-PYTHON-LOLLMS-6860196",
+      "title": "Command Injection",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+      "credit": [
+        "Patrick Peng"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[0,9.5.1)"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [
+        "9.5.1"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "critical",
+      "cvssScore": 9.8,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "lollms",
+      "references": [
+        {
+          "url": "https://github.com/parisneo/lollms/commit/7ebe08da7e0026b155af4f7be1d6417bc64cf02f",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+          "assigner": "Snyk",
+          "severity": "critical",
+          "baseScore": 9.8,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-06-24T08:43:21.134556Z"
+        }
+      ],
+      "description": "## Overview\n[lollms](https://pypi.org/project/lollms) is an A python library for AI personality definition\n\nAffected versions of this package are vulnerable to Command Injection in the `unInstall_binding` function. An attacker can execute arbitrary code by loading a malicious `__init__.py` file due to insufficient sanitization of the `name` parameter.\n## Remediation\nUpgrade `lollms` to version 9.5.1 or higher.\n## References\n- [GitHub Commit](https://github.com/parisneo/lollms/commit/7ebe08da7e0026b155af4f7be1d6417bc64cf02f)\n",
+      "epssDetails": {
+        "percentile": "0.08970",
+        "probability": "0.00043",
+        "modelVersion": "v2023.03.01"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2024-4078"
+        ],
+        "CWE": [
+          "CWE-78"
+        ]
+      },
+      "packageName": "lollms",
+      "proprietary": false,
+      "creationTime": "2024-05-16T14:03:31.933129Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2024-05-16T09:41:39.858000Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2024-05-16T14:03:32.135269Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2024-06-24T08:43:21.134556Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "critical",
+      "from": [
+        "genai-vuln-test@0.0.0",
+        "lollms@9.3.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "lollms",
+      "version": "9.3.0"
+    },
+    {
+      "id": "SNYK-PYTHON-LOLLMS-7218888",
+      "title": "Path Traversal",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P",
+      "credit": [
+        "trongphuc12"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[9.3.0,9.5.1)"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "9.5.1"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "critical",
+      "cvssScore": 9.8,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "lollms",
+      "references": [
+        {
+          "url": "https://github.com/parisneo/lollms/commit/f4424cfc3d6dfb3ad5ac17dd46801efe784933e9",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P",
+          "assigner": "Snyk",
+          "severity": "critical",
+          "baseScore": 9.8,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-06-24T08:45:02.730333Z"
+        }
+      ],
+      "description": "## Overview\n[lollms](https://pypi.org/project/lollms) is an A python library for AI personality definition\n\nAffected versions of this package are vulnerable to Path Traversal via the `sanitize_path_from_endpoint` and `sanitize_path` functions. An attacker can read arbitrary files and potentially disrupt service by crafting malicious input.\n## Remediation\nUpgrade `lollms` to version 9.5.1 or higher.\n## References\n- [GitHub Commit](https://github.com/parisneo/lollms/commit/f4424cfc3d6dfb3ad5ac17dd46801efe784933e9)\n",
+      "epssDetails": {
+        "percentile": "0.09404",
+        "probability": "0.00043",
+        "modelVersion": "v2023.03.01"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2024-3429"
+        ],
+        "CWE": [
+          "CWE-29"
+        ]
+      },
+      "packageName": "lollms",
+      "proprietary": false,
+      "creationTime": "2024-06-07T14:11:56.876090Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2024-06-06T19:42:15.566000Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2024-06-07T14:11:57.083492Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2024-06-24T08:45:02.730333Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "critical",
+      "from": [
+        "genai-vuln-test@0.0.0",
+        "lollms@9.3.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "lollms",
+      "version": "9.3.0"
+    },
+    {
+      "id": "SNYK-PYTHON-LOLLMS-7218890",
+      "title": "Path Traversal",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P",
+      "credit": [
+        "nhienit2010"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[9.3.0,9.5.1)"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "9.5.1"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 7.5,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "lollms",
+      "references": [
+        {
+          "url": "https://github.com/parisneo/lollms/commit/95ad36eeffc6a6be3e3f35ed35a384d768f0ecf6",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-06-24T08:45:29.031234Z"
+        }
+      ],
+      "description": "## Overview\n[lollms](https://pypi.org/project/lollms) is an A python library for AI personality definition\n\nAffected versions of this package are vulnerable to Path Traversal due to improper validation of file paths between Windows and Linux environments. An attacker can access sensitive information such as environment variables, database files, and configuration files by crafting requests using backslashes to manipulate file paths.\n## Remediation\nUpgrade `lollms` to version 9.5.1 or higher.\n## References\n- [GitHub Commit](https://github.com/parisneo/lollms/commit/95ad36eeffc6a6be3e3f35ed35a384d768f0ecf6)\n",
+      "epssDetails": {
+        "percentile": "0.08970",
+        "probability": "0.00043",
+        "modelVersion": "v2023.03.01"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2024-4881"
+        ],
+        "CWE": [
+          "CWE-36"
+        ]
+      },
+      "packageName": "lollms",
+      "proprietary": false,
+      "creationTime": "2024-06-07T14:19:28.815980Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2024-06-06T18:41:21.881000Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2024-06-07T14:19:29.030164Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2024-06-24T08:45:29.031234Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "genai-vuln-test@0.0.0",
+        "lollms@9.3.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "lollms",
+      "version": "9.3.0"
+    },
+    {
+      "id": "SNYK-PYTHON-LOLLMS-7251688",
+      "title": "Path Traversal",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H/E:P",
+      "credit": [
+        "0xanis"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[9.3.0,9.5.0)"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "9.5.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "critical",
+      "cvssScore": 9.1,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "lollms",
+      "references": [
+        {
+          "url": "https://github.com/parisneo/lollms/commit/95ad36eeffc6a6be3e3f35ed35a384d768f0ecf6",
+          "title": "GitHub Commit"
+        }
+      ],
+      "cvssDetails": [],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H/E:P",
+          "assigner": "Snyk",
+          "severity": "critical",
+          "baseScore": 9.1,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-06-24T08:41:09.490786Z"
+        }
+      ],
+      "description": "## Overview\n[lollms](https://pypi.org/project/lollms) is an A python library for AI personality definition\n\nAffected versions of this package are vulnerable to Path Traversal due to improper sanitization of Windows-style paths (`\\`) in the `sanitize_path_from_endpoint` function. An attacker with access to the application can read or delete any file on the windows filesystem.\n## Remediation\nUpgrade `lollms` to version 9.5.0 or higher.\n## References\n- [GitHub Commit](https://github.com/parisneo/lollms/commit/95ad36eeffc6a6be3e3f35ed35a384d768f0ecf6)\n",
+      "epssDetails": {
+        "percentile": "0.08970",
+        "probability": "0.00043",
+        "modelVersion": "v2023.03.01"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2024-4315"
+        ],
+        "CWE": [
+          "CWE-22"
+        ],
+        "GHSA": [
+          "GHSA-vqwr-q6cc-c242"
+        ]
+      },
+      "packageName": "lollms",
+      "proprietary": false,
+      "creationTime": "2024-06-13T14:59:51.430042Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2024-06-12T03:31:15Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2024-06-13T14:59:51.762365Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2024-06-24T08:41:09.490786Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "critical",
+      "from": [
+        "genai-vuln-test@0.0.0",
+        "lollms@9.3.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "lollms",
+      "version": "9.3.0"
+    },
+    {
+      "id": "SNYK-PYTHON-LOLLMS-7361779",
+      "title": "Improper Control of Generation of Code ('Code Injection')",
+      "CVSSv3": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P",
+      "credit": [
+        "DarkNinja"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[0,]"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 7,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "lollms",
+      "references": [
+        {
+          "url": "https://huntr.com/bounties/db57c343-9b80-4c1c-9ab0-9eef92c9b27b",
+          "title": "Huntr Report"
+        }
+      ],
+      "cvssDetails": [],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7,
+          "cvssVersion": "4.0",
+          "modificationTime": "2024-06-30T18:02:47.934795Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.8,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-06-30T18:02:47.934795Z"
+        }
+      ],
+      "description": "## Overview\n[lollms](https://pypi.org/project/lollms) is an A python library for AI personality definition\n\nAffected versions of this package are vulnerable to Improper Control of Generation of Code ('Code Injection') through the `create_conda_env` function. An attacker can execute arbitrary commands by manipulating the `env_name` and `python_version` parameters.\n## PoC\n```python\r\n\r\nimport subprocess\r\nimport sys\r\nimport os\r\n\r\ndef create_conda_env(env_name, python_version):\r\n    # Activate the Conda environment\r\n    if platform.system()==\"Windows\":\r\n        conda_path = Path(sys.executable).parent.parent/\"miniconda3\"/\"condabin\"/\"conda\"\r\n    else:\r\n        conda_path = Path(sys.executable).parent.parent.parent/\"miniconda3\"/\"bin\"/\"conda\"\r\n    ASCIIColors.red(\"Conda path:\")\r\n    ASCIIColors.yellow(conda_path)\r\n    process = subprocess.Popen(f'{conda_path} create --name {env_name} python={python_version} -y', shell=True)\r\n\r\n# POC for the remote code execution vulnerability\r\ncreate_conda_env(\"test_env; whoami\", \"3.9\")\r\n\r\n```\n## Remediation\nThere is no fixed version for `lollms`.\n\n## References\n- [Huntr Report](https://huntr.com/bounties/db57c343-9b80-4c1c-9ab0-9eef92c9b27b)\n",
+      "epssDetails": {
+        "percentile": "0.09113",
+        "probability": "0.00043",
+        "modelVersion": "v2023.03.01"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2024-3121"
+        ],
+        "CWE": [
+          "CWE-94"
+        ]
+      },
+      "packageName": "lollms",
+      "proprietary": false,
+      "creationTime": "2024-06-24T09:54:17.633257Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2024-06-24T00:42:39Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2024-06-30T18:02:47.934341Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2024-06-30T18:02:47.934795Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "genai-vuln-test@0.0.0",
+        "lollms@9.3.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "lollms",
+      "version": "9.3.0"
+    },
+    {
+      "id": "SNYK-PYTHON-LOLLMS-7411416",
+      "title": "Path Traversal",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L/E:P",
+      "credit": [
+        "ehtec"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[0,]"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 8.7,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "lollms",
+      "references": [
+        {
+          "url": "https://github.com/ParisNeo/lollms/blob/d670770464ca5024e046e10a61ab82827924c5d3/lollms/server/endpoints/lollms_tts.py%23L184",
+          "title": "Vulnerable Code"
+        }
+      ],
+      "cvssDetails": [],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.7,
+          "cvssVersion": "4.0",
+          "modificationTime": "2024-06-28T12:32:56.279855Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.6,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-06-28T12:32:56.279855Z"
+        }
+      ],
+      "description": "## Overview\n[lollms](https://pypi.org/project/lollms) is an A python library for AI personality definition\n\nAffected versions of this package are vulnerable to Path Traversal due to the possibility of performing an unauthenticated root folder settings change. An attacker can read arbitrary files on the system.\n\n**Note:**\nThis vulnerability can be abused to write audio files compatible with XTTS to arbitrary locations on the system, and also enumerate such file paths on the system.\n## Remediation\nThere is no fixed version for `lollms`.\n\n## References\n- [Vulnerable Code](https://github.com/ParisNeo/lollms/blob/d670770464ca5024e046e10a61ab82827924c5d3/lollms/server/endpoints/lollms_tts.py#L184)\n",
+      "epssDetails": {
+        "percentile": "0.10498",
+        "probability": "0.00044",
+        "modelVersion": "v2023.03.01"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2024-6085"
+        ],
+        "CWE": [
+          "CWE-22"
+        ]
+      },
+      "packageName": "lollms",
+      "proprietary": false,
+      "creationTime": "2024-06-28T12:32:56.037258Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2024-06-27T19:41:03.378000Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2024-06-28T12:32:56.217085Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2024-06-28T12:32:56.279855Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "genai-vuln-test@0.0.0",
+        "lollms@9.3.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "lollms",
+      "version": "9.3.0"
+    },
+    {
+      "id": "SNYK-PYTHON-LOLLMS-7411417",
+      "title": "Path Traversal",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P",
+      "credit": [
+        "ehtec"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[0,]"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 6.9,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "lollms",
+      "references": [
+        {
+          "url": "https://github.com/ParisNeo/lollms/blob/0582fb3d01a5672f2bd2bfa218bb9c185fa7525a/lollms/services/xtts/lollms_xtts.py%23L142",
+          "title": "Vulnerable Code"
+        }
+      ],
+      "cvssDetails": [],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.9,
+          "cvssVersion": "4.0",
+          "modificationTime": "2024-06-28T12:37:19.924405Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-06-28T12:37:19.924405Z"
+        }
+      ],
+      "description": "## Overview\n[lollms](https://pypi.org/project/lollms) is an A python library for AI personality definition\n\nAffected versions of this package are vulnerable to Path Traversal in speaker wav and output file paths.. This vulnerability can be abused to write audio files compatible with XTTS to arbitrary locations on the system, and also enumerate such file paths on the system.\n## Remediation\nThere is no fixed version for `lollms`.\n\n## References\n- [Vulnerable Code](https://github.com/ParisNeo/lollms/blob/0582fb3d01a5672f2bd2bfa218bb9c185fa7525a/lollms/services/xtts/lollms_xtts.py#L142)\n",
+      "epssDetails": {
+        "percentile": "0.08970",
+        "probability": "0.00043",
+        "modelVersion": "v2023.03.01"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2024-6139"
+        ],
+        "CWE": [
+          "CWE-29"
+        ]
+      },
+      "packageName": "lollms",
+      "proprietary": false,
+      "creationTime": "2024-06-28T12:37:19.680837Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2024-06-27T19:41:24.137000Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2024-06-28T12:37:19.861237Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2024-06-28T12:37:19.924405Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "genai-vuln-test@0.0.0",
+        "lollms@9.3.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "lollms",
+      "version": "9.3.0"
+    },
+    {
+      "id": "SNYK-PYTHON-LOLLMS-7547134",
+      "title": "Directory Traversal",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H/E:P",
+      "credit": [
+        "HaiNguyen"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,9.5.1)"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "9.5.1"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 7,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "lollms",
+      "references": [
+        {
+          "url": "https://github.com/parisneo/lollms/commit/26a3ff35acf152b49e1087d5698ad4864c7b6092",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://huntr.com/bounties/0a62f2fb-4e62-4128-9dc4-e8f1d959ac61",
+          "title": "PoC"
+        }
+      ],
+      "cvssDetails": [],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7,
+          "cvssVersion": "4.0",
+          "modificationTime": "2024-07-21T13:09:15.586878Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.3,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-07-21T13:09:15.586878Z"
+        }
+      ],
+      "description": "## Overview\n[lollms](https://pypi.org/project/lollms) is an A python library for AI personality definition\n\nAffected versions of this package are vulnerable to Directory Traversal through the `apply_settings` function. An attacker can manipulate the path and potentially write to important system folders by exploiting the inadequate security of the `sanitize_path` function, particularly the `discussion_db_name` parameter.\n## Remediation\nUpgrade `lollms` to version 9.5.1 or higher.\n## References\n- [GitHub Commit](https://github.com/parisneo/lollms/commit/26a3ff35acf152b49e1087d5698ad4864c7b6092)\n- [PoC](https://huntr.com/bounties/0a62f2fb-4e62-4128-9dc4-e8f1d959ac61)\n",
+      "epssDetails": {
+        "percentile": "0.08970",
+        "probability": "0.00043",
+        "modelVersion": "v2023.03.01"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2024-6281"
+        ],
+        "CWE": [
+          "CWE-22"
+        ]
+      },
+      "packageName": "lollms",
+      "proprietary": false,
+      "creationTime": "2024-07-21T13:08:52.355646Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2024-07-20T03:42:19Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2024-07-21T13:08:52.652049Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2024-07-21T13:09:15.586878Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "genai-vuln-test@0.0.0",
+        "lollms@9.3.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "lollms",
+      "version": "9.3.0"
+    },
+    {
+      "id": "SNYK-PYTHON-PYPDF2-5741898",
+      "title": "Denial of Service (DoS)",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[0,]"
+        ]
+      },
+      "exploit": "Not Defined",
+      "fixedIn": [],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "medium",
+      "cvssScore": 6.2,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "pypdf2",
+      "references": [
+        {
+          "url": "https://github.com/py-pdf/pypdf/commit/b0e5c689df689ab173df84dacd77b6fc3c161932",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/py-pdf/pypdf/pull/1828",
+          "title": "GitHub PR"
+        },
+        {
+          "url": "https://github.com/py-pdf/pypdf/pull/969",
+          "title": "GitHub Vulnerable PR"
+        },
+        {
+          "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2218075",
+          "title": "RedHat Bugzilla Bug"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 5.5,
+          "modificationTime": "2024-03-11T09:53:22.952593Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "assigner": "Snyk",
+          "severity": "medium",
+          "baseScore": 6.2,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-03-06T14:04:56.618131Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+          "assigner": "NVD",
+          "severity": "medium",
+          "baseScore": 5.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-03-11T09:53:22.952593Z"
+        }
+      ],
+      "description": "## Overview\n[PyPDF2](https://pypi.org/project/PyPDF2) is an A pure-python PDF library capable of splitting, merging, cropping, and transforming PDF files\n\nAffected versions of this package are vulnerable to Denial of Service (DoS). An attacker who uses this vulnerability can craft a PDF which leads to an infinite loop if `__parse_content_stream` is executed. This infinite loop blocks the current process and can utilize a single core of the CPU by 100%. It does not affect memory usage.\n## PoC\n```\nfrom pypdf import PdfReader\n\nreader = PdfReader(\"MiFO_LFO_FEIS_NOA_Published.3.pdf\")\npage = reader.pages[0]\npage.extract_text()\n```\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nThere is no fixed version for `PyPDF2`.\n\n## References\n- [GitHub Commit](https://github.com/py-pdf/pypdf/commit/b0e5c689df689ab173df84dacd77b6fc3c161932)\n- [GitHub PR](https://github.com/py-pdf/pypdf/pull/1828)\n- [GitHub Vulnerable PR](https://github.com/py-pdf/pypdf/pull/969)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2218075)\n",
+      "epssDetails": {
+        "percentile": "0.18747",
+        "probability": "0.00049",
+        "modelVersion": "v2023.03.01"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2023-36464"
+        ],
+        "CWE": [
+          "CWE-835"
+        ],
+        "GHSA": [
+          "GHSA-4vvm-4w3v-6mr8"
+        ]
+      },
+      "packageName": "pypdf2",
+      "proprietary": false,
+      "creationTime": "2023-06-28T08:23:35.423522Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2023-06-28T00:00:00Z",
+      "exploitDetails": {
+        "sources": [],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Not Defined",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Not Defined",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2023-06-28T08:23:35.405961Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2024-03-11T09:53:22.952593Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "medium",
+      "from": [
+        "genai-vuln-test@0.0.0",
+        "lollms@9.3.0",
+        "safe-store@0.7.2",
+        "pypdf2@3.0.1"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "pypdf2",
+      "version": "3.0.1"
+    },
+    {
+      "id": "SNYK-PYTHON-SETUPTOOLS-7448482",
+      "title": "Improper Control of Generation of Code ('Code Injection')",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P",
+      "credit": [
+        "CybrX"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,70.0.0)"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [
+        "70.0.0"
+      ],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 7.5,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "setuptools",
+      "references": [
+        {
+          "url": "https://github.com/pypa/setuptools/commit/88807c7062788254f654ea8c03427adc859321f0",
+          "title": "GitHub Commit"
+        },
+        {
+          "url": "https://github.com/pypa/setuptools/issues/4331",
+          "title": "GitHub Issue"
+        },
+        {
+          "url": "https://github.com/pypa/setuptools/pull/4332",
+          "title": "GitHub PR"
+        },
+        {
+          "url": "https://huntr.com/bounties/d6362117-ad57-4e83-951f-b8141c6e7ca5",
+          "title": "PoC"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "cvssV3BaseScore": 8.8,
+          "modificationTime": "2024-07-15T15:10:53.730467Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "4.0",
+          "modificationTime": "2024-07-15T08:52:03.374502Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 7.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-07-15T08:52:03.374502Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "assigner": "Red Hat",
+          "severity": "high",
+          "baseScore": 8.8,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-07-15T15:10:53.730467Z"
+        }
+      ],
+      "description": "## Overview\n\nAffected versions of this package are vulnerable to Improper Control of Generation of Code ('Code Injection') through the `package_index` module's download functions due to the unsafe usage of `os.system`. An attacker can execute arbitrary commands on the system by providing malicious URLs or manipulating the URLs retrieved from package index servers.\r\n\r\n**Note**\r\n\r\nBecause `easy_install` and `package_index` are deprecated, the exploitation surface is reduced, but it's conceivable through social engineering or minor compromise to a package index could grant remote access.\n## Remediation\nUpgrade `setuptools` to version 70.0.0 or higher.\n## References\n- [GitHub Commit](https://github.com/pypa/setuptools/commit/88807c7062788254f654ea8c03427adc859321f0)\n- [GitHub Issue](https://github.com/pypa/setuptools/issues/4331)\n- [GitHub PR](https://github.com/pypa/setuptools/pull/4332)\n- [PoC](https://huntr.com/bounties/d6362117-ad57-4e83-951f-b8141c6e7ca5)\n",
+      "epssDetails": {
+        "percentile": "0.08970",
+        "probability": "0.00043",
+        "modelVersion": "v2023.03.01"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2024-6345"
+        ],
+        "CWE": [
+          "CWE-94"
+        ]
+      },
+      "packageName": "setuptools",
+      "proprietary": false,
+      "creationTime": "2024-07-15T08:51:32.064092Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2024-07-15T00:39:51Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2024-07-15T08:51:32.353863Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2024-07-15T15:10:53.730467Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "genai-vuln-test@0.0.0",
+        "lollms@9.3.0",
+        "setuptools@68.0.0"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "setuptools",
+      "version": "68.0.0"
+    },
+    {
+      "id": "SNYK-PYTHON-TORCH-7231127",
+      "title": "Arbitrary Command Injection",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H/E:P",
+      "credit": [
+        "xbalien"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[0,]"
+        ]
+      },
+      "exploit": "Proof of Concept",
+      "fixedIn": [],
+      "patches": [],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "python",
+      "severity": "high",
+      "cvssScore": 8.5,
+      "functions": [],
+      "malicious": false,
+      "isDisputed": false,
+      "moduleName": "torch",
+      "references": [
+        {
+          "url": "https://github.com/pytorch/pytorch/blob/660db767ef56a0512c5e94051c5058613fcaf1df/torch/distributed/rpc/internal.py%23L196",
+          "title": "Vulnerable Code"
+        }
+      ],
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "critical",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+          "cvssV3BaseScore": 10,
+          "modificationTime": "2024-06-28T14:56:50.910109Z"
+        }
+      ],
+      "cvssSources": [
+        {
+          "type": "primary",
+          "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H/E:P",
+          "assigner": "Snyk",
+          "severity": "high",
+          "baseScore": 8.5,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-06-10T12:29:52.485184Z"
+        },
+        {
+          "type": "secondary",
+          "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+          "assigner": "Red Hat",
+          "severity": "critical",
+          "baseScore": 10,
+          "cvssVersion": "3.1",
+          "modificationTime": "2024-06-28T14:56:50.910109Z"
+        }
+      ],
+      "description": "## Overview\n[torch](https://pypi.org/project/torch) is a Tensors and Dynamic neural networks in Python with strong GPU acceleration\n\nAffected versions of this package are vulnerable to Arbitrary Command Injection through the `torch.distributed.rpc` framework due to missing function validation during RPC calls. An attacker can execute arbitrary commands by leveraging built-in Python functions such as `eval` during multi-CPU RPC communication.\n## PoC\nBuild master and worker nodes. Each node needs to set the following environment variables to ensure network communication between nodes.\r\n\r\n```\r\nexport MASTER_ADDR=10.206.0.3\r\nexport MASTER_PORT=29500\r\nexport TP_SOCKET_IFNAME=eth0\r\nexport GLOO_SOCKET_IFNAME=eth0\r\n```\r\n\r\nOn the master (10.206.0.3), enable the RPC service by calling the `init_rpc` function. At this time, the master will listen to `0.0.0.0:MSTER_PORT`, which is used to communicate with each node in the network.\r\n\r\n```\r\nimport torch\r\nimport torch.distributed.rpc as rpc\r\n\r\ndef add(a, b):\r\n    return a + b\r\n\r\nrpc.init_rpc(\"master\", rank=0, world_size=2)\r\nrpc.shutdown()\r\n```\r\n\r\nOn the worker, first, establish the rpc protocol with the master by calling `init_rpc`. Then, it is possible to communicate with the master through `rpc.rpc_sync` for RPC function invocations. Due to the lack of security filtering in `torch.distributed.rpc`, workers can execute built-in Python functions like `eval` on the master node through RPC, even though these functions are not intentionally provided by the developer. This leads to remote code execution on the master node, potentially causing it to be compromised.\r\n\r\n```\r\nimport torch\r\nimport torch.distributed.rpc as rpc\r\n\r\nrpc.init_rpc(\"worker\", rank=1, world_size=2)\r\nret = rpc.rpc_sync(\"master\", eval, args=('__import__(\"os\").system(\"id;ifconfig\")',))\r\nprint(ret)\r\nrpc.shutdown()\r\n```\r\n\r\nThe following commands can be used to start the master and worker separately. Of course, python3 master.py and python3 worker.py could also be executed separately.\r\n\r\n```\r\nfor master:\r\ntorchrun --nproc_per_node=1 --nnodes=2 --node_rank=0 --master_addr=10.206.0.3 --master_port=29500 master.py\r\n\r\nfor worker:\r\ntorchrun --nproc_per_node=1 --nnodes=2 --node_rank=1 --master_addr=10.206.0.3 --master_port=29500 worker.py\r\n```\r\n\r\nAs a result, the worker exploited the vulnerability to call built-in Python functions like eval on the master and execute arbitrary commands such as os.system(\"id;ifconfig\"). According to the test screenshot, the IP displayed after the command execution is 10.206.0.3, indicating that the command has been executed on the master.\n## Remediation\nThere is no fixed version for `torch`.\n\n## References\n- [Vulnerable Code](https://github.com/pytorch/pytorch/blob/660db767ef56a0512c5e94051c5058613fcaf1df/torch/distributed/rpc/internal.py#L196)\n",
+      "epssDetails": {
+        "percentile": "0.08970",
+        "probability": "0.00043",
+        "modelVersion": "v2023.03.01"
+      },
+      "identifiers": {
+        "CVE": [
+          "CVE-2024-5480"
+        ],
+        "CWE": [
+          "CWE-77"
+        ]
+      },
+      "packageName": "torch",
+      "proprietary": false,
+      "creationTime": "2024-06-10T11:45:47.639809Z",
+      "functions_new": [],
+      "alternativeIds": [],
+      "disclosureTime": "2024-06-06T18:41:21Z",
+      "exploitDetails": {
+        "sources": [
+          "Snyk"
+        ],
+        "maturityLevels": [
+          {
+            "type": "secondary",
+            "level": "Proof of Concept",
+            "format": "CVSSv3"
+          },
+          {
+            "type": "primary",
+            "level": "Proof of Concept",
+            "format": "CVSSv4"
+          }
+        ]
+      },
+      "packageManager": "pip",
+      "publicationTime": "2024-06-10T12:29:52.484934Z",
+      "severityBasedOn": "CVSS",
+      "modificationTime": "2024-06-28T14:56:50.910109Z",
+      "socialTrendAlert": false,
+      "severityWithCritical": "high",
+      "from": [
+        "genai-vuln-test@0.0.0",
+        "lollms@9.3.0",
+        "safe-store@0.7.2",
+        "sentence-transformers@3.0.1",
+        "torch@2.2.2"
+      ],
+      "upgradePath": [],
+      "isUpgradable": false,
+      "isPatchable": false,
+      "name": "torch",
+      "version": "2.2.2"
+    }
+  ],
+  "ok": false,
+  "dependencyCount": 74,
+  "org": "herget-demo-inc",
+  "policy": "# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.\nversion: v1.25.1\n# ignores vulnerabilities until expiry date; change duration by modifying expiry date\nignore:\n  SNYK-PYTHON-LOLLMS-7361778:\n    - '*':\n        reason: None Given\n        expires: 2024-09-07T15:15:58.809Z\n        created: 2024-08-08T15:15:58.810Z\n        source: cli\npatch: {}\n",
+  "isPrivate": true,
+  "licensesPolicy": {
+    "severities": {},
+    "orgLicenseRules": {
+      "Artistic-1.0": {
+        "licenseType": "Artistic-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "Artistic-2.0": {
+        "licenseType": "Artistic-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CDDL-1.0": {
+        "licenseType": "CDDL-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "EPL-1.0": {
+        "licenseType": "EPL-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "LGPL-2.0": {
+        "licenseType": "LGPL-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "LGPL-2.1": {
+        "licenseType": "LGPL-2.1",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "LGPL-3.0": {
+        "licenseType": "LGPL-3.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MPL-1.1": {
+        "licenseType": "MPL-1.1",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MPL-2.0": {
+        "licenseType": "MPL-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "MS-RL": {
+        "licenseType": "MS-RL",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "SimPL-2.0": {
+        "licenseType": "SimPL-2.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "BSD-3-Clause": {
+        "licenseType": "BSD-3-Clause",
+        "severity": "high",
+        "instructions": "This license is forbidden for legal compliance reasons."
+      },
+      "GPL-2.0": {
+        "licenseType": "GPL-2.0",
+        "severity": "high",
+        "instructions": "This license is forbidden. Please contact Legal department for additional guidance."
+      },
+      "GPL-3.0": {
+        "licenseType": "GPL-3.0",
+        "severity": "high",
+        "instructions": "This license is forbidden. Please contact Legal department for additional guidance."
+      },
+      "CPOL-1.02": {
+        "licenseType": "CPOL-1.02",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "AGPL-3.0": {
+        "licenseType": "AGPL-3.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "AGPL-1.0": {
+        "licenseType": "AGPL-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CC-BY-NC-1.0": {
+        "licenseType": "CC-BY-NC-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CC-BY-NC-2.0": {
+        "licenseType": "CC-BY-NC-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CC-BY-NC-2.5": {
+        "licenseType": "CC-BY-NC-2.5",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CC-BY-NC-3.0": {
+        "licenseType": "CC-BY-NC-3.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CC-BY-NC-4.0": {
+        "licenseType": "CC-BY-NC-4.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CC-BY-NC-ND-1.0": {
+        "licenseType": "CC-BY-NC-ND-1.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "CC-BY-NC-ND-2.0": {
+        "licenseType": "CC-BY-NC-ND-2.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "CC-BY-NC-ND-2.5": {
+        "licenseType": "CC-BY-NC-ND-2.5",
+        "severity": "high",
+        "instructions": ""
+      },
+      "CC-BY-NC-ND-3.0": {
+        "licenseType": "CC-BY-NC-ND-3.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "CC-BY-NC-ND-4.0": {
+        "licenseType": "CC-BY-NC-ND-4.0",
+        "severity": "high",
+        "instructions": ""
+      },
+      "CC-BY-NC-SA-1.0": {
+        "licenseType": "CC-BY-NC-SA-1.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CC-BY-NC-SA-2.0": {
+        "licenseType": "CC-BY-NC-SA-2.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CC-BY-NC-SA-2.5": {
+        "licenseType": "CC-BY-NC-SA-2.5",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CC-BY-NC-SA-3.0": {
+        "licenseType": "CC-BY-NC-SA-3.0",
+        "severity": "medium",
+        "instructions": ""
+      },
+      "CC-BY-NC-SA-4.0": {
+        "licenseType": "CC-BY-NC-SA-4.0",
+        "severity": "medium",
+        "instructions": ""
+      }
+    }
+  },
+  "packageManager": "pip",
+  "projectId": "151984a9-f52d-4d87-9f97-0d5e825572f7",
+  "ignoreSettings": {
+    "adminOnly": false,
+    "reasonRequired": false,
+    "disregardFilesystemIgnores": false
+  },
+  "summary": "12 vulnerable dependency paths",
+  "remediation": {
+    "unresolved": [
+      {
+        "id": "SNYK-PYTHON-LOLLMS-6860196",
+        "title": "Command Injection",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+        "credit": [
+          "Patrick Peng"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[0,9.5.1)"
+          ]
+        },
+        "exploit": "Not Defined",
+        "fixedIn": [
+          "9.5.1"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "critical",
+        "cvssScore": 9.8,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "lollms",
+        "references": [
+          {
+            "url": "https://github.com/parisneo/lollms/commit/7ebe08da7e0026b155af4f7be1d6417bc64cf02f",
+            "title": "GitHub Commit"
+          }
+        ],
+        "cvssDetails": [],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H",
+            "assigner": "Snyk",
+            "severity": "critical",
+            "baseScore": 9.8,
+            "cvssVersion": "3.1",
+            "modificationTime": "2024-06-24T08:43:21.134556Z"
+          }
+        ],
+        "description": "## Overview\n[lollms](https://pypi.org/project/lollms) is an A python library for AI personality definition\n\nAffected versions of this package are vulnerable to Command Injection in the `unInstall_binding` function. An attacker can execute arbitrary code by loading a malicious `__init__.py` file due to insufficient sanitization of the `name` parameter.\n## Remediation\nUpgrade `lollms` to version 9.5.1 or higher.\n## References\n- [GitHub Commit](https://github.com/parisneo/lollms/commit/7ebe08da7e0026b155af4f7be1d6417bc64cf02f)\n",
+        "epssDetails": {
+          "percentile": "0.08970",
+          "probability": "0.00043",
+          "modelVersion": "v2023.03.01"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2024-4078"
+          ],
+          "CWE": [
+            "CWE-78"
+          ]
+        },
+        "packageName": "lollms",
+        "proprietary": false,
+        "creationTime": "2024-05-16T14:03:31.933129Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2024-05-16T09:41:39.858000Z",
+        "exploitDetails": {
+          "sources": [],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Not Defined",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Not Defined",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2024-05-16T14:03:32.135269Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2024-06-24T08:43:21.134556Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 0,
+        "from": [
+          "genai-vuln-test@0.0.0",
+          "lollms@9.3.0"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "lollms",
+        "version": "9.3.0",
+        "severityWithCritical": "critical"
+      },
+      {
+        "id": "SNYK-PYTHON-LOLLMS-7218888",
+        "title": "Path Traversal",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P",
+        "credit": [
+          "trongphuc12"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[9.3.0,9.5.1)"
+          ]
+        },
+        "exploit": "Proof of Concept",
+        "fixedIn": [
+          "9.5.1"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "critical",
+        "cvssScore": 9.8,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "lollms",
+        "references": [
+          {
+            "url": "https://github.com/parisneo/lollms/commit/f4424cfc3d6dfb3ad5ac17dd46801efe784933e9",
+            "title": "GitHub Commit"
+          }
+        ],
+        "cvssDetails": [],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P",
+            "assigner": "Snyk",
+            "severity": "critical",
+            "baseScore": 9.8,
+            "cvssVersion": "3.1",
+            "modificationTime": "2024-06-24T08:45:02.730333Z"
+          }
+        ],
+        "description": "## Overview\n[lollms](https://pypi.org/project/lollms) is an A python library for AI personality definition\n\nAffected versions of this package are vulnerable to Path Traversal via the `sanitize_path_from_endpoint` and `sanitize_path` functions. An attacker can read arbitrary files and potentially disrupt service by crafting malicious input.\n## Remediation\nUpgrade `lollms` to version 9.5.1 or higher.\n## References\n- [GitHub Commit](https://github.com/parisneo/lollms/commit/f4424cfc3d6dfb3ad5ac17dd46801efe784933e9)\n",
+        "epssDetails": {
+          "percentile": "0.09404",
+          "probability": "0.00043",
+          "modelVersion": "v2023.03.01"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2024-3429"
+          ],
+          "CWE": [
+            "CWE-29"
+          ]
+        },
+        "packageName": "lollms",
+        "proprietary": false,
+        "creationTime": "2024-06-07T14:11:56.876090Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2024-06-06T19:42:15.566000Z",
+        "exploitDetails": {
+          "sources": [
+            "Snyk"
+          ],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Proof of Concept",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Proof of Concept",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2024-06-07T14:11:57.083492Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2024-06-24T08:45:02.730333Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 0,
+        "from": [
+          "genai-vuln-test@0.0.0",
+          "lollms@9.3.0"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "lollms",
+        "version": "9.3.0",
+        "severityWithCritical": "critical"
+      },
+      {
+        "id": "SNYK-PYTHON-LOLLMS-7218890",
+        "title": "Path Traversal",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P",
+        "credit": [
+          "nhienit2010"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[9.3.0,9.5.1)"
+          ]
+        },
+        "exploit": "Proof of Concept",
+        "fixedIn": [
+          "9.5.1"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "high",
+        "cvssScore": 7.5,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "lollms",
+        "references": [
+          {
+            "url": "https://github.com/parisneo/lollms/commit/95ad36eeffc6a6be3e3f35ed35a384d768f0ecf6",
+            "title": "GitHub Commit"
+          }
+        ],
+        "cvssDetails": [],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:P",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2024-06-24T08:45:29.031234Z"
+          }
+        ],
+        "description": "## Overview\n[lollms](https://pypi.org/project/lollms) is an A python library for AI personality definition\n\nAffected versions of this package are vulnerable to Path Traversal due to improper validation of file paths between Windows and Linux environments. An attacker can access sensitive information such as environment variables, database files, and configuration files by crafting requests using backslashes to manipulate file paths.\n## Remediation\nUpgrade `lollms` to version 9.5.1 or higher.\n## References\n- [GitHub Commit](https://github.com/parisneo/lollms/commit/95ad36eeffc6a6be3e3f35ed35a384d768f0ecf6)\n",
+        "epssDetails": {
+          "percentile": "0.08970",
+          "probability": "0.00043",
+          "modelVersion": "v2023.03.01"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2024-4881"
+          ],
+          "CWE": [
+            "CWE-36"
+          ]
+        },
+        "packageName": "lollms",
+        "proprietary": false,
+        "creationTime": "2024-06-07T14:19:28.815980Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2024-06-06T18:41:21.881000Z",
+        "exploitDetails": {
+          "sources": [
+            "Snyk"
+          ],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Proof of Concept",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Proof of Concept",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2024-06-07T14:19:29.030164Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2024-06-24T08:45:29.031234Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 0,
+        "from": [
+          "genai-vuln-test@0.0.0",
+          "lollms@9.3.0"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "lollms",
+        "version": "9.3.0",
+        "severityWithCritical": "high"
+      },
+      {
+        "id": "SNYK-PYTHON-LOLLMS-7251688",
+        "title": "Path Traversal",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H/E:P",
+        "credit": [
+          "0xanis"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[9.3.0,9.5.0)"
+          ]
+        },
+        "exploit": "Proof of Concept",
+        "fixedIn": [
+          "9.5.0"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "critical",
+        "cvssScore": 9.1,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "lollms",
+        "references": [
+          {
+            "url": "https://github.com/parisneo/lollms/commit/95ad36eeffc6a6be3e3f35ed35a384d768f0ecf6",
+            "title": "GitHub Commit"
+          }
+        ],
+        "cvssDetails": [],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:H/E:P",
+            "assigner": "Snyk",
+            "severity": "critical",
+            "baseScore": 9.1,
+            "cvssVersion": "3.1",
+            "modificationTime": "2024-06-24T08:41:09.490786Z"
+          }
+        ],
+        "description": "## Overview\n[lollms](https://pypi.org/project/lollms) is an A python library for AI personality definition\n\nAffected versions of this package are vulnerable to Path Traversal due to improper sanitization of Windows-style paths (`\\`) in the `sanitize_path_from_endpoint` function. An attacker with access to the application can read or delete any file on the windows filesystem.\n## Remediation\nUpgrade `lollms` to version 9.5.0 or higher.\n## References\n- [GitHub Commit](https://github.com/parisneo/lollms/commit/95ad36eeffc6a6be3e3f35ed35a384d768f0ecf6)\n",
+        "epssDetails": {
+          "percentile": "0.08970",
+          "probability": "0.00043",
+          "modelVersion": "v2023.03.01"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2024-4315"
+          ],
+          "CWE": [
+            "CWE-22"
+          ],
+          "GHSA": [
+            "GHSA-vqwr-q6cc-c242"
+          ]
+        },
+        "packageName": "lollms",
+        "proprietary": false,
+        "creationTime": "2024-06-13T14:59:51.430042Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2024-06-12T03:31:15Z",
+        "exploitDetails": {
+          "sources": [
+            "Snyk"
+          ],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Proof of Concept",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Proof of Concept",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2024-06-13T14:59:51.762365Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2024-06-24T08:41:09.490786Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 0,
+        "from": [
+          "genai-vuln-test@0.0.0",
+          "lollms@9.3.0"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "lollms",
+        "version": "9.3.0",
+        "severityWithCritical": "critical"
+      },
+      {
+        "id": "SNYK-PYTHON-LOLLMS-7361779",
+        "title": "Improper Control of Generation of Code ('Code Injection')",
+        "CVSSv3": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P",
+        "credit": [
+          "DarkNinja"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[0,]"
+          ]
+        },
+        "exploit": "Proof of Concept",
+        "fixedIn": [],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "high",
+        "cvssScore": 7,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "lollms",
+        "references": [
+          {
+            "url": "https://huntr.com/bounties/db57c343-9b80-4c1c-9ab0-9eef92c9b27b",
+            "title": "Huntr Report"
+          }
+        ],
+        "cvssDetails": [],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:P/AC:L/AT:N/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 7,
+            "cvssVersion": "4.0",
+            "modificationTime": "2024-06-30T18:02:47.934795Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:P/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 6.8,
+            "cvssVersion": "3.1",
+            "modificationTime": "2024-06-30T18:02:47.934795Z"
+          }
+        ],
+        "description": "## Overview\n[lollms](https://pypi.org/project/lollms) is an A python library for AI personality definition\n\nAffected versions of this package are vulnerable to Improper Control of Generation of Code ('Code Injection') through the `create_conda_env` function. An attacker can execute arbitrary commands by manipulating the `env_name` and `python_version` parameters.\n## PoC\n```python\r\n\r\nimport subprocess\r\nimport sys\r\nimport os\r\n\r\ndef create_conda_env(env_name, python_version):\r\n    # Activate the Conda environment\r\n    if platform.system()==\"Windows\":\r\n        conda_path = Path(sys.executable).parent.parent/\"miniconda3\"/\"condabin\"/\"conda\"\r\n    else:\r\n        conda_path = Path(sys.executable).parent.parent.parent/\"miniconda3\"/\"bin\"/\"conda\"\r\n    ASCIIColors.red(\"Conda path:\")\r\n    ASCIIColors.yellow(conda_path)\r\n    process = subprocess.Popen(f'{conda_path} create --name {env_name} python={python_version} -y', shell=True)\r\n\r\n# POC for the remote code execution vulnerability\r\ncreate_conda_env(\"test_env; whoami\", \"3.9\")\r\n\r\n```\n## Remediation\nThere is no fixed version for `lollms`.\n\n## References\n- [Huntr Report](https://huntr.com/bounties/db57c343-9b80-4c1c-9ab0-9eef92c9b27b)\n",
+        "epssDetails": {
+          "percentile": "0.09113",
+          "probability": "0.00043",
+          "modelVersion": "v2023.03.01"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2024-3121"
+          ],
+          "CWE": [
+            "CWE-94"
+          ]
+        },
+        "packageName": "lollms",
+        "proprietary": false,
+        "creationTime": "2024-06-24T09:54:17.633257Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2024-06-24T00:42:39Z",
+        "exploitDetails": {
+          "sources": [
+            "Snyk"
+          ],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Proof of Concept",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Proof of Concept",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2024-06-30T18:02:47.934341Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2024-06-30T18:02:47.934795Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 0,
+        "from": [
+          "genai-vuln-test@0.0.0",
+          "lollms@9.3.0"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": false,
+        "isRuntime": false,
+        "name": "lollms",
+        "version": "9.3.0",
+        "severityWithCritical": "high"
+      },
+      {
+        "id": "SNYK-PYTHON-LOLLMS-7411416",
+        "title": "Path Traversal",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L/E:P",
+        "credit": [
+          "ehtec"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[0,]"
+          ]
+        },
+        "exploit": "Proof of Concept",
+        "fixedIn": [],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "high",
+        "cvssScore": 8.7,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "lollms",
+        "references": [
+          {
+            "url": "https://github.com/ParisNeo/lollms/blob/d670770464ca5024e046e10a61ab82827924c5d3/lollms/server/endpoints/lollms_tts.py%23L184",
+            "title": "Vulnerable Code"
+          }
+        ],
+        "cvssDetails": [],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:P",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 8.7,
+            "cvssVersion": "4.0",
+            "modificationTime": "2024-06-28T12:32:56.279855Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:L/A:L/E:P",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 8.6,
+            "cvssVersion": "3.1",
+            "modificationTime": "2024-06-28T12:32:56.279855Z"
+          }
+        ],
+        "description": "## Overview\n[lollms](https://pypi.org/project/lollms) is an A python library for AI personality definition\n\nAffected versions of this package are vulnerable to Path Traversal due to the possibility of performing an unauthenticated root folder settings change. An attacker can read arbitrary files on the system.\n\n**Note:**\nThis vulnerability can be abused to write audio files compatible with XTTS to arbitrary locations on the system, and also enumerate such file paths on the system.\n## Remediation\nThere is no fixed version for `lollms`.\n\n## References\n- [Vulnerable Code](https://github.com/ParisNeo/lollms/blob/d670770464ca5024e046e10a61ab82827924c5d3/lollms/server/endpoints/lollms_tts.py#L184)\n",
+        "epssDetails": {
+          "percentile": "0.10498",
+          "probability": "0.00044",
+          "modelVersion": "v2023.03.01"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2024-6085"
+          ],
+          "CWE": [
+            "CWE-22"
+          ]
+        },
+        "packageName": "lollms",
+        "proprietary": false,
+        "creationTime": "2024-06-28T12:32:56.037258Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2024-06-27T19:41:03.378000Z",
+        "exploitDetails": {
+          "sources": [
+            "Snyk"
+          ],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Proof of Concept",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Proof of Concept",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2024-06-28T12:32:56.217085Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2024-06-28T12:32:56.279855Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 0,
+        "from": [
+          "genai-vuln-test@0.0.0",
+          "lollms@9.3.0"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": false,
+        "isRuntime": false,
+        "name": "lollms",
+        "version": "9.3.0",
+        "severityWithCritical": "high"
+      },
+      {
+        "id": "SNYK-PYTHON-LOLLMS-7411417",
+        "title": "Path Traversal",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P",
+        "credit": [
+          "ehtec"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[0,]"
+          ]
+        },
+        "exploit": "Proof of Concept",
+        "fixedIn": [],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "medium",
+        "cvssScore": 6.9,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "lollms",
+        "references": [
+          {
+            "url": "https://github.com/ParisNeo/lollms/blob/0582fb3d01a5672f2bd2bfa218bb9c185fa7525a/lollms/services/xtts/lollms_xtts.py%23L142",
+            "title": "Vulnerable Code"
+          }
+        ],
+        "cvssDetails": [],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:L/SC:N/SI:N/SA:N/E:P",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 6.9,
+            "cvssVersion": "4.0",
+            "modificationTime": "2024-06-28T12:37:19.924405Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:L/E:P",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 7.3,
+            "cvssVersion": "3.1",
+            "modificationTime": "2024-06-28T12:37:19.924405Z"
+          }
+        ],
+        "description": "## Overview\n[lollms](https://pypi.org/project/lollms) is an A python library for AI personality definition\n\nAffected versions of this package are vulnerable to Path Traversal in speaker wav and output file paths.. This vulnerability can be abused to write audio files compatible with XTTS to arbitrary locations on the system, and also enumerate such file paths on the system.\n## Remediation\nThere is no fixed version for `lollms`.\n\n## References\n- [Vulnerable Code](https://github.com/ParisNeo/lollms/blob/0582fb3d01a5672f2bd2bfa218bb9c185fa7525a/lollms/services/xtts/lollms_xtts.py#L142)\n",
+        "epssDetails": {
+          "percentile": "0.08970",
+          "probability": "0.00043",
+          "modelVersion": "v2023.03.01"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2024-6139"
+          ],
+          "CWE": [
+            "CWE-29"
+          ]
+        },
+        "packageName": "lollms",
+        "proprietary": false,
+        "creationTime": "2024-06-28T12:37:19.680837Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2024-06-27T19:41:24.137000Z",
+        "exploitDetails": {
+          "sources": [
+            "Snyk"
+          ],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Proof of Concept",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Proof of Concept",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2024-06-28T12:37:19.861237Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2024-06-28T12:37:19.924405Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 0,
+        "from": [
+          "genai-vuln-test@0.0.0",
+          "lollms@9.3.0"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": false,
+        "isRuntime": false,
+        "name": "lollms",
+        "version": "9.3.0",
+        "severityWithCritical": "medium"
+      },
+      {
+        "id": "SNYK-PYTHON-LOLLMS-7547134",
+        "title": "Directory Traversal",
+        "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H/E:P",
+        "credit": [
+          "HaiNguyen"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,9.5.1)"
+          ]
+        },
+        "exploit": "Proof of Concept",
+        "fixedIn": [
+          "9.5.1"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "high",
+        "cvssScore": 7,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "lollms",
+        "references": [
+          {
+            "url": "https://github.com/parisneo/lollms/commit/26a3ff35acf152b49e1087d5698ad4864c7b6092",
+            "title": "GitHub Commit"
+          },
+          {
+            "url": "https://huntr.com/bounties/0a62f2fb-4e62-4128-9dc4-e8f1d959ac61",
+            "title": "PoC"
+          }
+        ],
+        "cvssDetails": [],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:L/AC:L/AT:N/PR:N/UI:N/VC:L/VI:L/VA:H/SC:N/SI:N/SA:N/E:P",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 7,
+            "cvssVersion": "4.0",
+            "modificationTime": "2024-07-21T13:09:15.586878Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:H/E:P",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 7.3,
+            "cvssVersion": "3.1",
+            "modificationTime": "2024-07-21T13:09:15.586878Z"
+          }
+        ],
+        "description": "## Overview\n[lollms](https://pypi.org/project/lollms) is an A python library for AI personality definition\n\nAffected versions of this package are vulnerable to Directory Traversal through the `apply_settings` function. An attacker can manipulate the path and potentially write to important system folders by exploiting the inadequate security of the `sanitize_path` function, particularly the `discussion_db_name` parameter.\n## Remediation\nUpgrade `lollms` to version 9.5.1 or higher.\n## References\n- [GitHub Commit](https://github.com/parisneo/lollms/commit/26a3ff35acf152b49e1087d5698ad4864c7b6092)\n- [PoC](https://huntr.com/bounties/0a62f2fb-4e62-4128-9dc4-e8f1d959ac61)\n",
+        "epssDetails": {
+          "percentile": "0.08970",
+          "probability": "0.00043",
+          "modelVersion": "v2023.03.01"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2024-6281"
+          ],
+          "CWE": [
+            "CWE-22"
+          ]
+        },
+        "packageName": "lollms",
+        "proprietary": false,
+        "creationTime": "2024-07-21T13:08:52.355646Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2024-07-20T03:42:19Z",
+        "exploitDetails": {
+          "sources": [
+            "Snyk"
+          ],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Proof of Concept",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Proof of Concept",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2024-07-21T13:08:52.652049Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2024-07-21T13:09:15.586878Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 0,
+        "from": [
+          "genai-vuln-test@0.0.0",
+          "lollms@9.3.0"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "lollms",
+        "version": "9.3.0",
+        "severityWithCritical": "high"
+      },
+      {
+        "id": "SNYK-PYTHON-PYPDF2-5741898",
+        "title": "Denial of Service (DoS)",
+        "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+        "credit": [
+          "Unknown"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[0,]"
+          ]
+        },
+        "exploit": "Not Defined",
+        "fixedIn": [],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "medium",
+        "cvssScore": 6.2,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "pypdf2",
+        "references": [
+          {
+            "url": "https://github.com/py-pdf/pypdf/commit/b0e5c689df689ab173df84dacd77b6fc3c161932",
+            "title": "GitHub Commit"
+          },
+          {
+            "url": "https://github.com/py-pdf/pypdf/pull/1828",
+            "title": "GitHub PR"
+          },
+          {
+            "url": "https://github.com/py-pdf/pypdf/pull/969",
+            "title": "GitHub Vulnerable PR"
+          },
+          {
+            "url": "https://bugzilla.redhat.com/show_bug.cgi?id=2218075",
+            "title": "RedHat Bugzilla Bug"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "NVD",
+            "severity": "medium",
+            "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "cvssV3BaseScore": 5.5,
+            "modificationTime": "2024-03-11T09:53:22.952593Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+            "assigner": "Snyk",
+            "severity": "medium",
+            "baseScore": 6.2,
+            "cvssVersion": "3.1",
+            "modificationTime": "2024-03-06T14:04:56.618131Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H",
+            "assigner": "NVD",
+            "severity": "medium",
+            "baseScore": 5.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2024-03-11T09:53:22.952593Z"
+          }
+        ],
+        "description": "## Overview\n[PyPDF2](https://pypi.org/project/PyPDF2) is an A pure-python PDF library capable of splitting, merging, cropping, and transforming PDF files\n\nAffected versions of this package are vulnerable to Denial of Service (DoS). An attacker who uses this vulnerability can craft a PDF which leads to an infinite loop if `__parse_content_stream` is executed. This infinite loop blocks the current process and can utilize a single core of the CPU by 100%. It does not affect memory usage.\n## PoC\n```\nfrom pypdf import PdfReader\n\nreader = PdfReader(\"MiFO_LFO_FEIS_NOA_Published.3.pdf\")\npage = reader.pages[0]\npage.extract_text()\n```\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nThere is no fixed version for `PyPDF2`.\n\n## References\n- [GitHub Commit](https://github.com/py-pdf/pypdf/commit/b0e5c689df689ab173df84dacd77b6fc3c161932)\n- [GitHub PR](https://github.com/py-pdf/pypdf/pull/1828)\n- [GitHub Vulnerable PR](https://github.com/py-pdf/pypdf/pull/969)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2218075)\n",
+        "epssDetails": {
+          "percentile": "0.18747",
+          "probability": "0.00049",
+          "modelVersion": "v2023.03.01"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2023-36464"
+          ],
+          "CWE": [
+            "CWE-835"
+          ],
+          "GHSA": [
+            "GHSA-4vvm-4w3v-6mr8"
+          ]
+        },
+        "packageName": "pypdf2",
+        "proprietary": false,
+        "creationTime": "2023-06-28T08:23:35.423522Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2023-06-28T00:00:00Z",
+        "exploitDetails": {
+          "sources": [],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Not Defined",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Not Defined",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2023-06-28T08:23:35.405961Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2024-03-11T09:53:22.952593Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 76,
+        "from": [
+          "genai-vuln-test@0.0.0",
+          "lollms@9.3.0",
+          "safe-store@0.7.2",
+          "pypdf2@3.0.1"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": false,
+        "isRuntime": false,
+        "name": "pypdf2",
+        "version": "3.0.1",
+        "severityWithCritical": "medium"
+      },
+      {
+        "id": "SNYK-PYTHON-SETUPTOOLS-7448482",
+        "title": "Improper Control of Generation of Code ('Code Injection')",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P",
+        "credit": [
+          "CybrX"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[,70.0.0)"
+          ]
+        },
+        "exploit": "Proof of Concept",
+        "fixedIn": [
+          "70.0.0"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "high",
+        "cvssScore": 7.5,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "setuptools",
+        "references": [
+          {
+            "url": "https://github.com/pypa/setuptools/commit/88807c7062788254f654ea8c03427adc859321f0",
+            "title": "GitHub Commit"
+          },
+          {
+            "url": "https://github.com/pypa/setuptools/issues/4331",
+            "title": "GitHub Issue"
+          },
+          {
+            "url": "https://github.com/pypa/setuptools/pull/4332",
+            "title": "GitHub PR"
+          },
+          {
+            "url": "https://huntr.com/bounties/d6362117-ad57-4e83-951f-b8141c6e7ca5",
+            "title": "PoC"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "Red Hat",
+            "severity": "high",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "cvssV3BaseScore": 8.8,
+            "modificationTime": "2024-07-15T15:10:53.730467Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:L/AT:P/PR:N/UI:A/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "4.0",
+            "modificationTime": "2024-07-15T08:52:03.374502Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H/E:P",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 7.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2024-07-15T08:52:03.374502Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H",
+            "assigner": "Red Hat",
+            "severity": "high",
+            "baseScore": 8.8,
+            "cvssVersion": "3.1",
+            "modificationTime": "2024-07-15T15:10:53.730467Z"
+          }
+        ],
+        "description": "## Overview\n\nAffected versions of this package are vulnerable to Improper Control of Generation of Code ('Code Injection') through the `package_index` module's download functions due to the unsafe usage of `os.system`. An attacker can execute arbitrary commands on the system by providing malicious URLs or manipulating the URLs retrieved from package index servers.\r\n\r\n**Note**\r\n\r\nBecause `easy_install` and `package_index` are deprecated, the exploitation surface is reduced, but it's conceivable through social engineering or minor compromise to a package index could grant remote access.\n## Remediation\nUpgrade `setuptools` to version 70.0.0 or higher.\n## References\n- [GitHub Commit](https://github.com/pypa/setuptools/commit/88807c7062788254f654ea8c03427adc859321f0)\n- [GitHub Issue](https://github.com/pypa/setuptools/issues/4331)\n- [GitHub PR](https://github.com/pypa/setuptools/pull/4332)\n- [PoC](https://huntr.com/bounties/d6362117-ad57-4e83-951f-b8141c6e7ca5)\n",
+        "epssDetails": {
+          "percentile": "0.08970",
+          "probability": "0.00043",
+          "modelVersion": "v2023.03.01"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2024-6345"
+          ],
+          "CWE": [
+            "CWE-94"
+          ]
+        },
+        "packageName": "setuptools",
+        "proprietary": false,
+        "creationTime": "2024-07-15T08:51:32.064092Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2024-07-15T00:39:51Z",
+        "exploitDetails": {
+          "sources": [
+            "Snyk"
+          ],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Proof of Concept",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Proof of Concept",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2024-07-15T08:51:32.353863Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2024-07-15T15:10:53.730467Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "genai-vuln-test@0.0.0",
+          "lollms@9.3.0",
+          "setuptools@68.0.0"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": true,
+        "isRuntime": false,
+        "name": "setuptools",
+        "version": "68.0.0",
+        "severityWithCritical": "high"
+      },
+      {
+        "id": "SNYK-PYTHON-TORCH-7231127",
+        "title": "Arbitrary Command Injection",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H/E:P",
+        "credit": [
+          "xbalien"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[0,]"
+          ]
+        },
+        "exploit": "Proof of Concept",
+        "fixedIn": [],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "high",
+        "cvssScore": 8.5,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "torch",
+        "references": [
+          {
+            "url": "https://github.com/pytorch/pytorch/blob/660db767ef56a0512c5e94051c5058613fcaf1df/torch/distributed/rpc/internal.py%23L196",
+            "title": "Vulnerable Code"
+          }
+        ],
+        "cvssDetails": [
+          {
+            "assigner": "Red Hat",
+            "severity": "critical",
+            "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+            "cvssV3BaseScore": 10,
+            "modificationTime": "2024-06-28T14:56:50.910109Z"
+          }
+        ],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:H/A:H/E:P",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 8.5,
+            "cvssVersion": "3.1",
+            "modificationTime": "2024-06-10T12:29:52.485184Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+            "assigner": "Red Hat",
+            "severity": "critical",
+            "baseScore": 10,
+            "cvssVersion": "3.1",
+            "modificationTime": "2024-06-28T14:56:50.910109Z"
+          }
+        ],
+        "description": "## Overview\n[torch](https://pypi.org/project/torch) is a Tensors and Dynamic neural networks in Python with strong GPU acceleration\n\nAffected versions of this package are vulnerable to Arbitrary Command Injection through the `torch.distributed.rpc` framework due to missing function validation during RPC calls. An attacker can execute arbitrary commands by leveraging built-in Python functions such as `eval` during multi-CPU RPC communication.\n## PoC\nBuild master and worker nodes. Each node needs to set the following environment variables to ensure network communication between nodes.\r\n\r\n```\r\nexport MASTER_ADDR=10.206.0.3\r\nexport MASTER_PORT=29500\r\nexport TP_SOCKET_IFNAME=eth0\r\nexport GLOO_SOCKET_IFNAME=eth0\r\n```\r\n\r\nOn the master (10.206.0.3), enable the RPC service by calling the `init_rpc` function. At this time, the master will listen to `0.0.0.0:MSTER_PORT`, which is used to communicate with each node in the network.\r\n\r\n```\r\nimport torch\r\nimport torch.distributed.rpc as rpc\r\n\r\ndef add(a, b):\r\n    return a + b\r\n\r\nrpc.init_rpc(\"master\", rank=0, world_size=2)\r\nrpc.shutdown()\r\n```\r\n\r\nOn the worker, first, establish the rpc protocol with the master by calling `init_rpc`. Then, it is possible to communicate with the master through `rpc.rpc_sync` for RPC function invocations. Due to the lack of security filtering in `torch.distributed.rpc`, workers can execute built-in Python functions like `eval` on the master node through RPC, even though these functions are not intentionally provided by the developer. This leads to remote code execution on the master node, potentially causing it to be compromised.\r\n\r\n```\r\nimport torch\r\nimport torch.distributed.rpc as rpc\r\n\r\nrpc.init_rpc(\"worker\", rank=1, world_size=2)\r\nret = rpc.rpc_sync(\"master\", eval, args=('__import__(\"os\").system(\"id;ifconfig\")',))\r\nprint(ret)\r\nrpc.shutdown()\r\n```\r\n\r\nThe following commands can be used to start the master and worker separately. Of course, python3 master.py and python3 worker.py could also be executed separately.\r\n\r\n```\r\nfor master:\r\ntorchrun --nproc_per_node=1 --nnodes=2 --node_rank=0 --master_addr=10.206.0.3 --master_port=29500 master.py\r\n\r\nfor worker:\r\ntorchrun --nproc_per_node=1 --nnodes=2 --node_rank=1 --master_addr=10.206.0.3 --master_port=29500 worker.py\r\n```\r\n\r\nAs a result, the worker exploited the vulnerability to call built-in Python functions like eval on the master and execute arbitrary commands such as os.system(\"id;ifconfig\"). According to the test screenshot, the IP displayed after the command execution is 10.206.0.3, indicating that the command has been executed on the master.\n## Remediation\nThere is no fixed version for `torch`.\n\n## References\n- [Vulnerable Code](https://github.com/pytorch/pytorch/blob/660db767ef56a0512c5e94051c5058613fcaf1df/torch/distributed/rpc/internal.py#L196)\n",
+        "epssDetails": {
+          "percentile": "0.08970",
+          "probability": "0.00043",
+          "modelVersion": "v2023.03.01"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2024-5480"
+          ],
+          "CWE": [
+            "CWE-77"
+          ]
+        },
+        "packageName": "torch",
+        "proprietary": false,
+        "creationTime": "2024-06-10T11:45:47.639809Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2024-06-06T18:41:21Z",
+        "exploitDetails": {
+          "sources": [
+            "Snyk"
+          ],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Proof of Concept",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Proof of Concept",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2024-06-10T12:29:52.484934Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2024-06-28T14:56:50.910109Z",
+        "socialTrendAlert": false,
+        "packagePopularityRank": 99,
+        "from": [
+          "genai-vuln-test@0.0.0",
+          "lollms@9.3.0",
+          "safe-store@0.7.2",
+          "sentence-transformers@3.0.1",
+          "torch@2.2.2"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "isPinnable": false,
+        "isRuntime": false,
+        "name": "torch",
+        "version": "2.2.2",
+        "severityWithCritical": "high"
+      }
+    ],
+    "upgrade": {},
+    "patch": {},
+    "ignore": {},
+    "pin": {
+      "lollms@9.3.0": {
+        "upgradeTo": "lollms@9.5.1",
+        "vulns": [
+          "SNYK-PYTHON-LOLLMS-6860196",
+          "SNYK-PYTHON-LOLLMS-7218888",
+          "SNYK-PYTHON-LOLLMS-7218890",
+          "SNYK-PYTHON-LOLLMS-7251688",
+          "SNYK-PYTHON-LOLLMS-7547134"
+        ],
+        "isTransitive": false
+      },
+      "setuptools@68.0.0": {
+        "upgradeTo": "setuptools@70.0.0",
+        "vulns": [
+          "SNYK-PYTHON-SETUPTOOLS-7448482"
+        ],
+        "isTransitive": true
+      }
+    }
+  },
+  "filesystemPolicy": true,
+  "filtered": {
+    "ignore": [
+      {
+        "id": "SNYK-PYTHON-LOLLMS-7361778",
+        "title": "Arbitrary File Write via Archive Extraction (Zip Slip)",
+        "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P",
+        "credit": [
+          "Nhien.IT"
+        ],
+        "semver": {
+          "vulnerable": [
+            "[9.3.0,9.5.1)"
+          ]
+        },
+        "exploit": "Proof of Concept",
+        "fixedIn": [
+          "9.5.1"
+        ],
+        "patches": [],
+        "insights": {
+          "triageAdvice": null
+        },
+        "language": "python",
+        "severity": "critical",
+        "cvssScore": 9.2,
+        "functions": [],
+        "malicious": false,
+        "isDisputed": false,
+        "moduleName": "lollms",
+        "references": [
+          {
+            "url": "https://github.com/parisneo/lollms/commit/2d0c4e76be93195836ecd0948027e791b8a2626f",
+            "title": "GitHub Commit"
+          }
+        ],
+        "cvssDetails": [],
+        "cvssSources": [
+          {
+            "type": "primary",
+            "vector": "CVSS:4.0/AV:N/AC:H/AT:P/PR:N/UI:N/VC:H/VI:H/VA:H/SC:N/SI:N/SA:N/E:P",
+            "assigner": "Snyk",
+            "severity": "critical",
+            "baseScore": 9.2,
+            "cvssVersion": "4.0",
+            "modificationTime": "2024-06-24T09:49:19.161408Z"
+          },
+          {
+            "type": "secondary",
+            "vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H/E:P",
+            "assigner": "Snyk",
+            "severity": "high",
+            "baseScore": 8.1,
+            "cvssVersion": "3.1",
+            "modificationTime": "2024-06-24T09:49:19.161408Z"
+          }
+        ],
+        "description": "## Overview\n[lollms](https://pypi.org/project/lollms) is an A python library for AI personality definition\n\nAffected versions of this package are vulnerable to Arbitrary File Write via Archive Extraction (Zip Slip) via the `ExtensionBuilder().build_extension()` function and the `/mount_extension` endpoint. An attacker can execute arbitrary code by manipulating the `data.category` and `data.folder` parameters to navigate beyond the intended directory structure and create or append malicious configurations to the `extensions` list.\n\n## Details\n\nIt is exploited using a specially crafted zip archive, that holds path traversal filenames. When exploited, a filename in a malicious archive is concatenated to the target extraction directory, which results in the final path ending up outside of the target folder. For instance, a zip may hold a file with a \"../../file.exe\" location and thus break out of the target folder. If an executable or a configuration file is overwritten with a file containing malicious code, the problem can turn into an arbitrary code execution issue quite easily.\n\nThe following is an example of a zip archive with one benign file and one malicious file. Extracting the malicous file will result in traversing out of the target folder, ending up in `/root/.ssh/` overwriting the `authorized_keys` file:\n\n```\n\n+2018-04-15 22:04:29 ..... 19 19 good.txt\n\n+2018-04-15 22:04:42 ..... 20 20 ../../../../../../root/.ssh/authorized_keys\n\n```\n\n## Remediation\nUpgrade `lollms` to version 9.5.1 or higher.\n## References\n- [GitHub Commit](https://github.com/parisneo/lollms/commit/2d0c4e76be93195836ecd0948027e791b8a2626f)\n",
+        "epssDetails": {
+          "percentile": "0.08970",
+          "probability": "0.00043",
+          "modelVersion": "v2023.03.01"
+        },
+        "identifiers": {
+          "CVE": [
+            "CVE-2024-5443"
+          ],
+          "CWE": [
+            "CWE-29"
+          ]
+        },
+        "packageName": "lollms",
+        "proprietary": false,
+        "creationTime": "2024-06-24T09:49:18.899297Z",
+        "functions_new": [],
+        "alternativeIds": [],
+        "disclosureTime": "2024-06-22T16:40:28.504000Z",
+        "exploitDetails": {
+          "sources": [
+            "Snyk"
+          ],
+          "maturityLevels": [
+            {
+              "type": "secondary",
+              "level": "Proof of Concept",
+              "format": "CVSSv3"
+            },
+            {
+              "type": "primary",
+              "level": "Proof of Concept",
+              "format": "CVSSv4"
+            }
+          ]
+        },
+        "packageManager": "pip",
+        "publicationTime": "2024-06-24T09:49:19.097621Z",
+        "severityBasedOn": "CVSS",
+        "modificationTime": "2024-06-24T09:49:19.161408Z",
+        "socialTrendAlert": false,
+        "severityWithCritical": "critical",
+        "from": [
+          "genai-vuln-test@0.0.0",
+          "lollms@9.3.0"
+        ],
+        "upgradePath": [],
+        "isUpgradable": false,
+        "isPatchable": false,
+        "name": "lollms",
+        "version": "9.3.0",
+        "filtered": {
+          "ignored": [
+            {
+              "reason": "None Given",
+              "expires": "2024-09-07T15:15:58.809Z",
+              "created": "2024-08-08T15:15:58.810Z",
+              "source": "cli",
+              "path": [
+                "*"
+              ]
+            }
+          ]
+        }
+      }
+    ],
+    "patch": []
+  },
+  "uniqueCount": 11,
+  "projectName": "genai-vuln-test",
+  "displayTargetFile": "requirements.txt",
+  "hasUnknownVersions": false,
+  "path": "/Users/csherg/git/genai-vuln-test"
+}
